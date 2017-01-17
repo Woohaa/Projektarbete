@@ -39,6 +39,11 @@ namespace Projektarbete
 						break;
 					case ConsoleKey.D4:
 						Console.Clear();
+						Console.WriteLine("Type in a number");
+						int inputValue;
+						if(!int.TryParse(Console.ReadLine(), out inputValue))
+							Console.WriteLine("Must be a number!");
+						manager.ShowAllDividableNumbers(inputValue);
 						manager.LoopTroughAllNumbers();
 						Console.ReadKey(true);
 						break;

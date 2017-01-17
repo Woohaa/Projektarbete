@@ -16,7 +16,7 @@ namespace Projektarbete
 			{
 				if (i % 3 == 0)
 				{
-					Console.WriteLine(i + " " + "Coca");
+					Console.WriteLine("Coca");
 					isCoca = true;			
 				}
 				else
@@ -36,7 +36,7 @@ namespace Projektarbete
 			{
 				if (i % 5 == 0)
 				{
-					Console.WriteLine(i + " " + "Cola");
+					Console.WriteLine("Cola");
 					isCola = true;
 				}
 				else
@@ -56,7 +56,7 @@ namespace Projektarbete
 			{
 				if(i % 3 == 0 && i % 5 == 0)
 				{
-					Console.WriteLine(i + " " + "CocaCola");
+					Console.WriteLine("CocaCola");
 					isCocaCola = true;
 				}
 				else
