@@ -68,34 +68,27 @@ namespace Projektarbete
 			return isCocaCola;
 		}
 
-		public int ShowAllDividableNumbers()
+		public string ShowAllDividableNumbers(int number)
 		{
-			int result = 0;
+			if (number % 15 == 0)
+				return "CocaCola";
+			else if (number % 3 == 0)
+				return "Coca";
+			else if (number % 5 == 0)
+				return "Cola";
+			else
+				return number.ToString();
+		}
 
-			for (int i = 1; i < 101; i++)
+		public void LoopTroughAllNumbers()
+		{
+			int i = 1;
+
+			while (i < 101)
 			{
-				if (i % 3 == 0)
-				{
-					Console.WriteLine(i + " " + "Coca");
-					result++;
-				}
-				if (i % 5 == 0)
-				{
-					Console.WriteLine(i + " " + "Cola");
-					result++;
-				}
-				if (i % 3 == 0 && i % 5 == 0)
-				{
-					Console.WriteLine(i + " " + "CocaCola");
-					result++;
-				}
-				else
-				{
-					Console.WriteLine(i);
-				}
+				Console.WriteLine(ShowAllDividableNumbers(i));
+				i++;
 			}
-
-			return result;
 		}
 
 	}

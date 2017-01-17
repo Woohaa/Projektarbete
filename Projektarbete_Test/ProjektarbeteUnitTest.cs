@@ -45,13 +45,55 @@ namespace Projektarbete_Test
 		}
 
 		[TestMethod]
-		public void Test_ShowAllDividableNumbers()
+		public void Test_ShowAllDividableNumbersValue()
 		{
 			Manager manager = new Manager();
 
-			int expected = 59;
+			string expected = "1";
+			string expected2 = "7";
 
-			int actual = manager.ShowAllDividableNumbers();
+			string actual = manager.ShowAllDividableNumbers(1);
+			string actual2 = manager.ShowAllDividableNumbers(7);
+
+			Assert.AreEqual(expected, actual);
+			Assert.AreEqual(expected2, actual2);
+
+		}
+
+		[TestMethod]
+		public void Test_ShowAllDividableNumbersBy3()
+		{
+			Manager manager = new Manager();
+
+			string expected = "Coca";
+
+			string actual = manager.ShowAllDividableNumbers(3);
+
+			Assert.AreEqual(expected, actual);
+
+		}
+
+		[TestMethod]
+		public void Test_ShowAllDividableNumbersBy5()
+		{
+			Manager manager = new Manager();
+
+			string expected = "Cola";
+			
+			string actual = manager.ShowAllDividableNumbers(5);
+			
+			Assert.AreEqual(expected, actual);
+
+		}
+
+		[TestMethod]
+		public void Test_ShowAllDividableNumbersBy3_5()
+		{
+			Manager manager = new Manager();
+
+			string expected = "CocaCola";
+
+			string actual = manager.ShowAllDividableNumbers(15);
 
 			Assert.AreEqual(expected, actual);
 

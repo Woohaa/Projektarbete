@@ -39,7 +39,7 @@ namespace Projektarbete
 						break;
 					case ConsoleKey.D4:
 						Console.Clear();
-						manager.ShowAllDividableNumbers();
+						manager.LoopTroughAllNumbers();
 						Console.ReadKey(true);
 						break;
 					case ConsoleKey.D5:
